@@ -1,9 +1,9 @@
 {
-  "name": "lou117/cockade-middlewares",
-  "description": "Reusable (PSR-15 compliant) middlewares for Cockade PHP microframework",
+  "name": "lou117/core-middlewares",
+  "description": "Reusable (PSR-15 compliant) middlewares for Core PHP microframework",
   "type": "library",
   "keywords": ["php", "psr-15", "psr-7", "microframework", "middleware"],
-  "homepage": "https://github.com/lou117/cockade-middlewares",
+  "homepage": "https://github.com/lou117/core-middlewares",
   "readme": "README.md",
   "license": "MIT",
   "authors": [
@@ -16,21 +16,20 @@
   ],
   "support": {
     "email": "sylvain.glacon@icloud.com",
-    "source": "https://github.com/lou117/cockade-middlewares"
+    "source": "https://github.com/lou117/core-middlewares"
   },
   "require": {
     "php": "^7.1",
-    "psr/http-server-middleware": "1.0.0",
-    "guzzlehttp/psr7": "1.4.2"
+    "psr/http-server-middleware": "1.0.0"
   },
   "suggest": {
     "psr/container": "Some of Cockade middlewares can use a PSR-11 container as a replacement for PSR-7 request attributes",
-    "nikic/fast-route": "RoutingMiddleware dependency",
-    "guzzlehttp/psr7": "ErrorHandlingMiddleware dependency"
+    "guzzlehttp/psr7": "ErrorHandling middlewares dependency",
+    "twig/twig": "TwigMiddleware dependency"
   },
   "autoload": {
     "psr-4": {
-      "Lou117\\Cockade\\Middleware\\": "src/"
+      "Lou117\\Core\\Middleware\\": "src/"
     }
   }
 }
