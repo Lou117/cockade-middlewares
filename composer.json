@@ -23,7 +23,7 @@
     "psr/http-server-middleware": "1.0.0"
   },
   "suggest": {
-    "psr/container": "Some of Cockade middlewares can use a PSR-11 container as a replacement for PSR-7 request attributes",
+    "psr/container": "Some of Core middlewares CAN use a PSR-11 container as a replacement for PSR-7 request attributes",
     "guzzlehttp/psr7": "ErrorHandling middlewares dependency",
     "twig/twig": "TwigMiddleware dependency"
   },

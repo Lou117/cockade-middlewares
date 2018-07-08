@@ -5,7 +5,7 @@
  * Date: 08/07/2018
  * Time: 18:49
  */
-namespace Lou117\Cockade\Middleware;
+namespace Lou117\Core\Middleware;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Server\MiddlewareInterface;
@@ -18,7 +18,7 @@ use Psr\Http\Server\RequestHandlerInterface;
  * When used with an implementation of RequestHandlerInterface that exposes a 'container' property (as Core
  * RequestHandler class do), Twig environment will be stored in container. Otherwise, Twig environment will be stored as
  * a request attribute.
- * @package Lou117\Cockade\Middleware
+ * @package Lou117\Core\Middleware
  */
 class TwigMiddleware implements MiddlewareInterface
 {

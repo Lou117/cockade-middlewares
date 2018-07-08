@@ -5,7 +5,7 @@
  * Date: 14/06/2018
  * Time: 20:54
  */
-namespace Lou117\Cockade\Middleware;
+namespace Lou117\Core\Middleware;
 
 use \Throwable;
 use GuzzleHttp\Psr7\Response;
@@ -24,7 +24,7 @@ use Psr\Http\Server\RequestHandlerInterface;
  *
  * Please note that this implementation will ALWAYS return a ready-to-use text response, which can be problematic if
  * incoming HTTP request Accept header doesn't allow for "text/plain" Content-Type (a.k.a. content negotiation).
- * @package Lou117\Cockade\Middleware
+ * @package Lou117\Core\Middleware
  */
 class ErrorHandlingTextMiddleware implements MiddlewareInterface
 {

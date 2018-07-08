@@ -5,7 +5,7 @@
  * Date: 08/07/2018
  * Time: 19:09
  */
-namespace Lou117\Cockade\Middleware;
+namespace Lou117\Core\Middleware;
 
 use \PDO;
 use Psr\Http\Message\ResponseInterface;
@@ -19,7 +19,7 @@ use Psr\Http\Server\RequestHandlerInterface;
  * When used with an implementation of RequestHandlerInterface that exposes a 'container' property (as Core
  * RequestHandler class do), MySQL connection will be stored in container. Otherwise, MySQL connection will be stored as
  * a request attribute.
- * @package Lou117\Cockade\Middleware
+ * @package Lou117\Core\Middleware
  */
 class MysqlConnectionMiddleware implements MiddlewareInterface
 {
