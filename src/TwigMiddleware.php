@@ -50,7 +50,7 @@ class TwigMiddleware implements MiddlewareInterface
         $twig = new Twig_Environment($loader, $this->settings["environment_options"]);
 
         if (
-            property_exists("container", $handler)
+            property_exists($handler, "container")
             && $handler->container instanceof ContainerInterface
         ) {
 

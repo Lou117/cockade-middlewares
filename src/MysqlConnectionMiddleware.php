@@ -62,7 +62,7 @@ class MysqlConnectionMiddleware implements MiddlewareInterface
         );
 
         if (
-            property_exists("container", $handler)
+            property_exists($handler, "container")
             && $handler->container instanceof ContainerInterface
         ) {
 
