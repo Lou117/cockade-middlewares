@@ -48,16 +48,14 @@ class MysqlConnectionMiddleware implements MiddlewareInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
-        $dbSettings = $this->settings["database"];
-
         $mysql = new PDO(
-            "mysql:host={$dbSettings["server"]};dbname={$dbSettings["database"]}",
-            $dbSettings["username"],
-            $dbSettings["password"],
+            "mysql:host={$this->settings["server"]};dbname={$this->settings["database"]}",
+            $this->settings["username"],
+            $this->settings["password"],
             [
                 PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                PDO::ATTR_ERRMODE => $dbSettings["silent"] ? PDO::ERRMODE_SILENT : PDO::ERRMODE_EXCEPTION
+                PDO::ATTR_ERRMODE => $this->settings["silent"] ? PDO::ERRMODE_SILENT : PDO::ERRMODE_EXCEPTION
             ]
         );
 
