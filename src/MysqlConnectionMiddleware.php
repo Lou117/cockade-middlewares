@@ -71,5 +71,7 @@ class MysqlConnectionMiddleware implements MiddlewareInterface
             $request->withAttribute("mysql", $mysql);
 
         }
+
+        return $handler->handle($request);
     }
 }
