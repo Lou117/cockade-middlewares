@@ -8,6 +8,7 @@
 namespace Lou117\Core\Middleware;
 
 use \PDO;
+use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Message\ServerRequestInterface;
