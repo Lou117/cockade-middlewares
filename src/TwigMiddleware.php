@@ -55,7 +55,7 @@ class TwigMiddleware implements MiddlewareInterface
             && $handler->container instanceof ContainerInterface
         ) {
 
-            $handler->set("twig", $twig);
+            $handler->container->set("twig", $twig);
 
         } else {
 
